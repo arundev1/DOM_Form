@@ -23,7 +23,7 @@ function iterateTableData() {
     var len = checks.length;
     let selectedFood = [];
     for (var i=0; i<len; i++) {
-        if(checks[i]<2){
+        if(checks<2){
             alert("Select 2 items");
         }
         else{
