@@ -1,4 +1,7 @@
-var form = document.getElementsByClassName('val');
+
+var forms = document.getElementsByClassName('needs-validation');
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    // Loop over them and prevent submission
     var validation = Array.prototype.filter.call(forms, function(form) {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -9,31 +12,32 @@ var form = document.getElementsByClassName('val');
             console.log(forms);
             iterateTableData();
         }
-        form.classList.add('validation_done');
+        form.classList.add('was-validated');
     }, false);
     });
 
   
-var form_val = document.getElementById('form_val');
+var myForm = document.getElementById('myForm');
 let formValues = [];
 
 function iterateTableData() {
     var cboxes = document.getElementsByName('food[]');
+    var len = cboxes.length;
     let selectedFood = [];
-    for (var i=0; i<cboxes.length; i++) {
+    for (var i=0; i<len; i++) {
         if(cboxes[i].checked){
             selectedFood.push(cboxes[i].value);
         }
     }
     formValues.push({
-        firstName: form_val.firstName.value,
-        lastName: form_val.lastName.value,
-        address: form_val.address.value,
-        pincode: form_val.pincode.value,
-        gender: form_val.gender.value,
+        firstName: myForm.firstName.value,
+        lastName: myForm.lastName.value,
+        address: myForm.address.value,
+        pincode: myForm.pincode.value,
+        gender: myForm.gender.value,
         food: selectedFood,
-        country: form_val.country.value,
-        state: form_val.state.value
+        country: myForm.country.value,
+        state: myForm.state.value
     })
     var tbody = '';
     formValues.forEach(value=>{
@@ -49,6 +53,6 @@ function iterateTableData() {
     });
     var tableData = document.getElementById('table-data');
     tableData.innerHTML = tbody;
-    form_val.reset();
-    forms.classList.remove('validation_done');
+    myForm.reset();
+    forms.classList.remove('was-validated');
 }
