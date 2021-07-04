@@ -18,29 +18,15 @@ var forms = document.getElementsByClassName('reqvali');
   
 var Form_val = document.getElementById('Form_val');
 let formValues = [];
-function handleData()
-{
-    var form_data = new FormData(document.querySelector("form"));
-    
-    if(!form_data.has("food[]"))
-    {
-        document.getElementById("chk_option_error").style.visibility = "visible";
-    }
-    else
-    {
-        document.getElementById("chk_option_error").style.visibility = "hidden";
-    }
-    return false;
-}
 
 function iterateTableData() {
-    var cboxes = document.getElementsByName('food[]');
+    var checks = document.getElementsByName('food[]');
     
-    var len = cboxes.length;
+    var len = checks.length;
     let selectedFood = [];
     for (var i=0; i<len; i++) {
-        if(cboxes[i].checked){
-            selectedFood.push(cboxes[i].value);
+        if(checks[i].checked){
+            selectedFood.push(checks[i].value);
         }
     }
     formValues.push({
