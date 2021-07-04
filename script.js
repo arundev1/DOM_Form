@@ -25,11 +25,13 @@ function iterateTableData() {
     for (var i=0; i<len; i++) {
             if(checks[i].checked){
             selectedFood.push(checks[i].value);
-            }
-        if(selectedFood.length<2){
+            }            
+        }
+    for(var j=0; j<selectedFood.length,j++){
+            if(selectedFood.length<2){
             alert("Select 2 items")
         }
-            
+        
         }
     }
     formValues.push({
