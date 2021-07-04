@@ -22,8 +22,9 @@ let formValues = [];
 function iterateTableData() {
     var cboxes = document.getElementsByName('food[]');
     
+    var len = cboxes.length;
     let selectedFood = [];
-    for (var i=0; i<cboxes.length; i++) {
+    for (var i=0; i<len; i++) {
         if(cboxes[i].checked){
             selectedFood.push(cboxes[i].value);
         }
