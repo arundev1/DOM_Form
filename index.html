@@ -60,26 +60,31 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                    <label class="form-label" for="food">Select Food</label>                
-                    <div class="form-group food"> 
-  <form onsubmit="return handleData()" method="post" action="https://postman-echo.com/post">
-
-<div style="visibility:hidden; color:red; " id="chk_option_error">
-Please select at least one option.
-</div>
-<div class="form-check  form-check-inline">
-<input type="checkbox" name="food[]" id="langs_javascript"  value="JavaScript" checked> <label for="langs_javascript">JavaScript</label>
-</div>
-<div class="form-check  form-check-inline">
-<input type="checkbox" name="food[]" id="langs_perl" value="Perl"> <label for="langs_perl">Perl</label>
-</div>
-<div class="form-check  form-check-inline">
-<input type="checkbox" name="food[]" id="langs_php" value="PHP" checked> <label for="langs_php">PHP</label>
-</div>
-<div class="form-check  form-check-inline">
-<input type="checkbox" name="food[]" id="langs_ruby" value="Ruby"> <label for="langs_ruby">Ruby</label>
-</div>
-      </div>
+                    <label class="form-label" for="food">Choose Food</label required>                
+                    <div class="form-group food">      
+                        <div class="form-check  form-check-inline required">
+                            <input class="form-check-input food-checkbox" type="checkbox" value="Pizza" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Pizza</label>
+                          </div>    
+                        <div class="form-check  form-check-inline">
+                            <input class="form-check-input food-checkbox" type="checkbox" value="Burger" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Burger</label>
+                          </div>    
+                        <div class="form-check  form-check-inline">
+                            <input class="form-check-input food-checkbox" type="checkbox" value="Shawarma" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Shawarma</label>
+                          </div>    
+                        <div class="form-check  form-check-inline">
+                            <input class="form-check-input food-checkbox" type="checkbox" value="KFC" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">KFC</label>
+                          </div>    
+                        <div class="form-check  form-check-inline">
+                            <input class="form-check-input food-checkbox" type="checkbox" value="Mutton" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Mutton</label>
+                          </div>
+                         
+                    </div>
+                </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="form-group">                
                         <label class="form-label" for="country">Country</label>
