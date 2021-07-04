@@ -18,6 +18,20 @@ var forms = document.getElementsByClassName('reqvali');
   
 var Form_val = document.getElementById('Form_val');
 let formValues = [];
+function handleData()
+{
+    var form_data = new FormData(document.querySelector("form"));
+    
+    if(!form_data.has("food[]"))
+    {
+        document.getElementById("chk_option_error").style.visibility = "visible";
+    }
+    else
+    {
+        document.getElementById("chk_option_error").style.visibility = "hidden";
+    }
+    return false;
+}
 
 function iterateTableData() {
     var cboxes = document.getElementsByName('food[]');
