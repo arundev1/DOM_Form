@@ -52,6 +52,6 @@ function iterateTableData() {
     });
     var tableData = document.getElementById('table-data');
     tableData.innerHTML = tbody;
-    myForm.reset();
+    Form_val.reset();
     forms.classList.remove('validation_done');
 }
