@@ -22,15 +22,20 @@ function iterateTableData() {
     var checks = document.getElementsByName('food[]');
     var len = checks.length;
     let selectedFood = [];
-    var leng=selectedFood.length;
+    
     for (var i=0; i<len; i++) {
         if(checks[i].checked){
             selectedFood.push(checks[i].value);
         }
-        else{
-            window.alert("Select 2 items");
-        }
+       
     }
+    var leng=selectedFood.length; 
+     for (var j=0; j<leng; j++) {
+         if(leng<2){
+             window.alert("2 items")
+         }
+     }
+    
     
     formValues.push({
         firstName: Form_val.firstName.value,
