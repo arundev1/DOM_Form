@@ -8,14 +8,12 @@ var forms = document.getElementsByClassName('reqvali');
         if (form.checkValidity() === false) {
         event.stopPropagation();
         }else{
-            
             iterateTableData();
         }
         form.classList.add('validation_done');
     }, false);
     });
 
-  
 var Form_val = document.getElementById('Form_val');
 let formValues = [];
 
@@ -25,8 +23,14 @@ function iterateTableData() {
     var len = checks.length;
     let selectedFood = [];
     for (var i=0; i<len; i++) {
-        if(checks[i].checked){
+        if(checks[i]<2){
+            alert("Select 2 items");
+        }
+        else{
+            if(checks[i].checked){
             selectedFood.push(checks[i].value);
+            }
+            
         }
     }
     formValues.push({
