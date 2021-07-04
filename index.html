@@ -11,13 +11,14 @@
 <body>
     <div class="container">
         <div class="display-4 my-3 text-center">DOM Manipulation Form</div>
-        <form id="form_val" class="val" method="POST" novalidate>
+        <form id="myForm" class="needs-validation" method="POST" novalidate>
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="form-group">                
                         <label class="form-label" for="firstName">First Name</label>
                         <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required/>
-                        <div class="invalid-feedback">Enter First Name
+                        <div class="invalid-feedback">
+                            Enter the First Name
                           </div>
                     </div>
                 </div>
@@ -25,7 +26,8 @@
                     <div class="form-group">                
                         <label class="form-label" for="lastName">Last Name</label>
                         <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required/>
-                        <div class="invalid-feedback">Enter Last Name
+                        <div class="invalid-feedback">
+                            Enter the Last Name
                           </div>
                     </div>
                 </div>
@@ -33,14 +35,17 @@
                     <div class="form-group">                
                         <label class="form-label" for="address">Address</label>
                         <input type="text" class="form-control" name="address" id="address" placeholder="Address" required/>
-                        <div class="invalid-feedback">Enter Address </div>
+                        <div class="invalid-feedback">
+                            Enter the Address
+                          </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="form-group">                
                         <label class="form-label" for="pincode">Pincode</label>
                         <input type="number" class="form-control" name="pincode" id="pincode" placeholder="Pincode" minlength="6" required/>
-                        <div class="invalid-feedback">Enter Pincode
+                        <div class="invalid-feedback">
+                            Enter the Pincode
                           </div>
                     </div>
                 </div>
@@ -59,34 +64,36 @@
                             <input class="form-check-input" type="radio" value="others" id="gender" name="gender" required>
                             <label class="form-check-label" for="gender">others</label>
                         </div>  
-                        <div class="invalid-feedback"> Select Gender
+                        <div class="invalid-feedback">
+                            Select the Gender
                           </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                    <label class="form-label" for="food">Select favourite Food</label>                
+                    <label class="form-label" for="food">Choose Food</label>                
                     <div class="form-group food">      
                         <div class="form-check  form-check-inline">
-                            <input class="form-check-input food-checkbox" type="checkbox" value="Pizza" id="selectFood" name="food[]">
-                            <label class="form-check-label" for="selectFood">Pizza</label>
+                            <input class="form-check-input food-checkbox" type="checkbox" value="food1" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Food1</label>
                           </div>    
                         <div class="form-check  form-check-inline">
-                            <input class="form-check-input food-checkbox" type="checkbox" value="Burger" id="selectFood" name="food[]">
-                            <label class="form-check-label" for="selectFood">Burger</label>
+                            <input class="form-check-input food-checkbox" type="checkbox" value="food2" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Food2</label>
                           </div>    
                         <div class="form-check  form-check-inline">
-                            <input class="form-check-input food-checkbox" type="checkbox" value="Shawarma" id="selectFood" name="food[]">
-                            <label class="form-check-label" for="selectFood">Shawarma</label>
+                            <input class="form-check-input food-checkbox" type="checkbox" value="food3" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Food3</label>
                           </div>    
                         <div class="form-check  form-check-inline">
-                            <input class="form-check-input food-checkbox" type="checkbox" value="KFC" id="selectFood" name="food[]">
-                            <label class="form-check-label" for="selectFood">KFC</label>
+                            <input class="form-check-input food-checkbox" type="checkbox" value="food4" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Food4</label>
                           </div>    
                         <div class="form-check  form-check-inline">
-                            <input class="form-check-input food-checkbox" type="checkbox" value="Mutton" id="selectFood" name="food[]">
-                            <label class="form-check-label" for="selectFood">Mutton</label>
+                            <input class="form-check-input food-checkbox" type="checkbox" value="food5" id="chooseFood" name="food[]">
+                            <label class="form-check-label" for="chooseFood">Food5</label>
                           </div>
-                          <div class="invalid-feedback">Select Food
+                          <div class="invalid-feedback">
+                            Select the Food
                           </div>
                     </div>
                 </div>
@@ -103,7 +110,8 @@
                     <div class="form-group">                
                         <label class="form-label" for="state">State</label>
                         <input type="text" class="form-control" name="state" id="state" placeholder="State" required/>
-                        <div class="invalid-feedback">Enter State
+                        <div class="invalid-feedback">
+                            Enter the State
                           </div>
                     </div>
                 </div>
@@ -113,13 +121,13 @@
             </div>
         </form>
 
-        <table id="table-info" class="table table-warning">
+        <table id="table-info" class="table table-dark">
             <thead>
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Address</th>
-                    <th>Pin-code</th>
+                    <th>Pincode</th>
                     <th>Gender</th>
                     <th>Food</th>
                     <th>State</th>
