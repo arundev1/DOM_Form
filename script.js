@@ -1,3 +1,17 @@
+var forms = document.getElementsByClassName('reqvali');
+    
+    var validation = Array.prototype.filter.call(forms, function(form) {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        console.log(form.checkValidity())
+        if (form.checkValidity() === false) {
+        event.stopPropagation();
+        }else{
+            iterateTableData();
+        }
+        form.classList.add('vali_done');
+    }, false);
+    });
 
 
   
