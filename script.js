@@ -3,7 +3,6 @@ var forms = document.getElementsByClassName('reqvali');
     var validation = Array.prototype.filter.call(forms, function(form) {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        console.log(form.checkValidity())
         if (form.checkValidity() === false) {
         event.stopPropagation();
         }else{
@@ -22,6 +21,7 @@ function iterateTableData() {
     var checks = document.getElementsByName('food[]');
     var len = checks.length;
     let selectedFood = [];
+    var leng=selectedFood.length; 
     
     for (var i=0; i<len; i++) {
         if(checks[i].checked){
@@ -29,10 +29,10 @@ function iterateTableData() {
         }
        
     }
-    var leng=selectedFood.length; 
+    
      for (var j=0; j<=leng; j++) {
          if(leng<2){
-             window.alert("Select 2 items")
+             window.alert("Select 2 food items")
          }
      }
     
@@ -52,10 +52,10 @@ function iterateTableData() {
         tbody += "<tr>";
         tbody += `<td> ${value.firstName} </td>`;
         tbody += `<td> ${value.lastName} </td>`;
-        tbody += `<td> ${value.address} </td>`;
-        tbody += `<td> ${value.pincode} </td>`;
         tbody += `<td> ${value.gender} </td>`;
         tbody += `<td> ${value.food} </td>`;
+        tbody += `<td> ${value.address} </td>`;
+        tbody += `<td> ${value.pincode} </td>`;
         tbody += `<td> ${value.country} </td>`;
         tbody += `<td> ${value.state} </td> </tr>`;
     });
