@@ -8,7 +8,7 @@ var forms = document.getElementsByClassName('reqvali');
         if (form.checkValidity() === false) {
         event.stopPropagation();
         }else{
-            console.log(forms);
+            
             iterateTableData();
         }
         form.classList.add('validation_done');
