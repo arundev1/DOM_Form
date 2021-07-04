@@ -21,7 +21,7 @@ function iterateTableData() {
     var checks = document.getElementsByName('food[]');
     var len = checks.length;
     let selectedFood = [];
-    var leng=selectedFood.length; 
+    
     
     for (var i=0; i<len; i++) {
         if(checks[i].checked){
@@ -29,7 +29,7 @@ function iterateTableData() {
         }
        
     }
-    
+    var leng=selectedFood.length; 
      for (var j=0; j<=leng; j++) {
          if(leng<2){
              window.alert("Select 2 food items")
