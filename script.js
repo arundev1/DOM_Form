@@ -52,10 +52,10 @@ function iterateTableData() {
         tbody += "<tr>";
         tbody += `<td> ${value.firstName} </td>`;
         tbody += `<td> ${value.lastName} </td>`;
-        tbody += `<td> ${value.gender} </td>`;
-        tbody += `<td> ${value.food} </td>`;
         tbody += `<td> ${value.address} </td>`;
         tbody += `<td> ${value.pincode} </td>`;
+        tbody += `<td> ${value.gender} </td>`;
+        tbody += `<td> ${value.food} </td>`;
         tbody += `<td> ${value.country} </td>`;
         tbody += `<td> ${value.state} </td> </tr>`;
     });
