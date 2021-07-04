@@ -30,7 +30,7 @@ function iterateTableData() {
        
     }
     var leng=selectedFood.length; 
-     for (var j=0; j<leng; j++) {
+     for (var j=0; j<=leng; j++) {
          if(leng<2){
              window.alert("Select 2 items")
          }
