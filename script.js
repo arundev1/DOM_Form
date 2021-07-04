@@ -27,13 +27,7 @@ function iterateTableData() {
             selectedFood.push(checks[i].value);
             }            
         }
-    for(var j=0; j<selectedFood.length,j++){
-            if(selectedFood.length<2){
-            alert("Select 2 items")
-        }
-        
-        }
-    }
+}
     formValues.push({
         firstName: Form_val.firstName.value,
         lastName: Form_val.lastName.value,
