@@ -1,7 +1,6 @@
 
-var forms = document.getElementsByClassName('needs-validation');
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    // Loop over them and prevent submission
+var forms = document.getElementsByClassName('reqvali');
+    
     var validation = Array.prototype.filter.call(forms, function(form) {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -12,32 +11,32 @@ var forms = document.getElementsByClassName('needs-validation');
             console.log(forms);
             iterateTableData();
         }
-        form.classList.add('was-validated');
+        form.classList.add('validation_done');
     }, false);
     });
 
   
-var myForm = document.getElementById('myForm');
+var Form_val = document.getElementById('Form_val');
 let formValues = [];
 
 function iterateTableData() {
     var cboxes = document.getElementsByName('food[]');
-    var len = cboxes.length;
+    
     let selectedFood = [];
-    for (var i=0; i<len; i++) {
+    for (var i=0; i<cboxes.length; i++) {
         if(cboxes[i].checked){
             selectedFood.push(cboxes[i].value);
         }
     }
     formValues.push({
-        firstName: myForm.firstName.value,
-        lastName: myForm.lastName.value,
-        address: myForm.address.value,
-        pincode: myForm.pincode.value,
-        gender: myForm.gender.value,
+        firstName: Form_val.firstName.value,
+        lastName: Form_val.lastName.value,
+        address: Form_val.address.value,
+        pincode: Form_val.pincode.value,
+        gender: Form_val.gender.value,
         food: selectedFood,
-        country: myForm.country.value,
-        state: myForm.state.value
+        country: Form_val.country.value,
+        state: Form_val.state.value
     })
     var tbody = '';
     formValues.forEach(value=>{
@@ -54,5 +53,5 @@ function iterateTableData() {
     var tableData = document.getElementById('table-data');
     tableData.innerHTML = tbody;
     myForm.reset();
-    forms.classList.remove('was-validated');
+    forms.classList.remove('validation_done');
 }
