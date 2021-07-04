@@ -23,11 +23,15 @@ function iterateTableData() {
     var len = checks.length;
     let selectedFood = [];
     for (var i=0; i<len; i++) {
-            if(checks[i].checked){
+        if(checks[i].checked){
             selectedFood.push(checks[i].value);
-            }            
+            } 
         }
-}
+    }
+    
+                       
+        
+
     formValues.push({
         firstName: Form_val.firstName.value,
         lastName: Form_val.lastName.value,
