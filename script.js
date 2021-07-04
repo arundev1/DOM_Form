@@ -10,28 +10,23 @@ var forms = document.getElementsByClassName('reqvali');
         }else{
             iterateTableData();
         }
-        form.classList.add('validation_done');
+        form.classList.add('vali_done');
     }, false);
     });
 
+  
 var Form_val = document.getElementById('Form_val');
 let formValues = [];
 
 function iterateTableData() {
     var checks = document.getElementsByName('food[]');
-    
     var len = checks.length;
     let selectedFood = [];
     for (var i=0; i<len; i++) {
         if(checks[i].checked){
             selectedFood.push(checks[i].value);
-            } 
         }
     }
-    
-                       
-        
-
     formValues.push({
         firstName: Form_val.firstName.value,
         lastName: Form_val.lastName.value,
@@ -57,5 +52,5 @@ function iterateTableData() {
     var tableData = document.getElementById('table-data');
     tableData.innerHTML = tbody;
     Form_val.reset();
-    forms.classList.remove('validation_done');
+    forms.classList.remove('vali_done');
 }
