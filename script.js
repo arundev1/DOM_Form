@@ -28,7 +28,7 @@ function iterateTableData() {
             selectedFood.push(checks[i].value);
         }
         else{
-            return "Select 2 item"
+            document.getElementsByName('food[]').innerHTML = "Select 2 items";
         }
     }
     
